@@ -24,7 +24,6 @@ while ('\\' not in file_dir_input) and ('/' not in file_dir_input):
     # put in a path to a directory pls
     if ('\\' not in file_dir_input) and ('/' not in file_dir_input):
         file_dir = ''
-    print(file_dir)
 
 # for each folder and file within that directory
 for root, dirs, files in os.walk(file_dir):
