@@ -52,14 +52,15 @@ for root, dirs, files in os.walk(file_dir):
 print("relative filepaths of irregular pairs")
 for base in sorted(names_dict, key=names_dict.get, reverse=True):
     base_count = (names_dict[base])
+    base_replace = base.replace(file_dir.lower(), '')
     # if there's an abnormal pairing
     if base_count != 2:
-        print('%s: %s' % (base.replace('\\\\?\\%s', '').replace(file_dir_input.lower(), ''), base_count))
+        print('%s: %s' % (base_replace, base_count))
     # if there's a problem with the name
     elif base == '[N/A]':
-        print('[N/A] %s: %s' % (base.replace('\\\\?\\%s', '').replace(file_dir_input.lower(), ''), base_count))
+        print('[N/A] %s: %s' % (base_replace, base_count))
     # otherwise tally the successful pair matches
     else:
         base_pairs += 1
-print('\n\nmatching basename pairs: %s\ntotal files: %s\
+print('\nmatching basename pairs: %s\ntotal files: %s\
 \ntotal directories: %s' % (base_pairs, total_files, total_dirs))
