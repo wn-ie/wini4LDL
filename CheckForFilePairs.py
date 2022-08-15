@@ -48,7 +48,7 @@ for root, dirs, files in os.walk(file_dir):
             names_dict[base_name] = 1
 
 # print results
-print("relative filepaths of irregular pairs")
+print("\nrelative filepaths of irregular pairs")
 for base in sorted(names_dict, key=names_dict.get, reverse=True):
     base_count = (names_dict[base])
     base_replace = base.replace(file_dir.lower(), '')
