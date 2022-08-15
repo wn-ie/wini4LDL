@@ -54,10 +54,10 @@ for base in sorted(names_dict, key=names_dict.get, reverse=True):
     base_replace = base.replace(file_dir.lower(), '')
     # if there's an abnormal pairing
     if base_count != 2:
-        print('%s: %s files' % (base_replace, base_count))
+        print('%s: %s file(s)' % (base_replace, base_count))
     # if there's a problem with the name
     elif base == '[N/A]':
-        print('[N/A] %s: %s files' % (base_replace, base_count))
+        print('[N/A] %s: %s file(s)' % (base_replace, base_count))
     # otherwise tally the successful pair matches
     else:
         base_pairs += 1
