@@ -11,7 +11,7 @@ names_dict = {}
 
 # while there's no folder identified
 while ('\\' not in file_dir_input) and ('/' not in file_dir_input):
-    # the directory you want to work with
+    # asks for the directory in the CLI window
     file_dir_input = input('input folder path:\n> ')
     # for unix paths
     if file_dir_input.startswith('/') == True:
@@ -20,7 +20,7 @@ while ('\\' not in file_dir_input) and ('/' not in file_dir_input):
     elif '\\' in file_dir_input:
         # add '\\?\' to make universal path\
         #   (combat character limit for long paths)
-        file_dir = '\\\\?\\%s' % file_dir_input
+        file_dir = '\\\\?\\%s' % file_dir_input.replace('''"''', '''''')
     # put in a path to a directory pls
     if ('\\' not in file_dir_input) and ('/' not in file_dir_input):
         file_dir = ''
