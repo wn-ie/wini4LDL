@@ -15,7 +15,7 @@ while ('\\' not in file_dir_input) and ('/' not in file_dir_input):
     file_dir_input = input('drag the folder or paste the folder path below:\n> ')
     # for unix paths
     if file_dir_input.startswith('/') == True:
-        file_dir = file_dir_input
+        file_dir = file_dir_input.replace('''\\''', '''''')
     # for windows paths
     elif '\\' in file_dir_input:
         # add '\\?\' to make universal path\
