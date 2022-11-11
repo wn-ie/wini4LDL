@@ -12,7 +12,7 @@ names_dict = {}
 # while there's no folder identified
 while ('\\' not in file_dir_input) and ('/' not in file_dir_input):
     # asks for the directory in the CLI window
-    file_dir_input = input('paste the folder path below:\n> ')
+    file_dir_input = input('drag the folder or paste the folder path below:\n> ')
     # for unix paths
     if file_dir_input.startswith('/') == True:
         file_dir = file_dir_input
