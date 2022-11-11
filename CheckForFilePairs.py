@@ -16,6 +16,7 @@ while ('\\' not in file_dir_input) and ('/' not in file_dir_input):
     # for unix paths
     if file_dir_input.startswith('/') == True:
         file_dir = file_dir_input.replace('''\\''', '''''')
+        print(file_dir)
     # for windows paths
     elif '\\' in file_dir_input:
         # add '\\?\' to make universal path\
