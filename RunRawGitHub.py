@@ -4,8 +4,8 @@
 import requests, sys
 try:
     inputurl = sys.argv[1]
-    subargs = sys.argv[1:]
-    print(inputurl, subargs)
+    subargs = sys.argv[2:]
+    # print(inputurl, subargs)
 except:
     print('---caution: ONLY use with urls/files you trust---')
     inputurl = input('paste the GitHub url below:\n> ')

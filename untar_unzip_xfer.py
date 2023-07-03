@@ -5,6 +5,12 @@
 import os, sys, subprocess, glob, zipfile, tarfile, shutil, traceback
 from datetime import datetime
 
+try:
+    arglist = subargs
+    print(arglist)
+except Exception:
+    errortraceback = traceback.format_exc()
+    print(errortraceback)
 # source input, windows only
 try:
     drivepath = sys.argv[1]
