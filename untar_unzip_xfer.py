@@ -7,13 +7,15 @@ from datetime import datetime
 
 try:
     arglist = subargs
-    print(arglist)
+    # print(arglist[0])
+    # print(arglist[1])
 except Exception:
     errortraceback = traceback.format_exc()
     print(errortraceback)
 # source input, windows only
 try:
-    drivepath = sys.argv[1]
+    drivepath = arglist[0]
+    print(drivepath)
 except:
     drivepath = ''
     while ('\\' not in drivepath):
@@ -27,7 +29,8 @@ except:
 
 # destination input, windows only
 try:
-    destinationroot = sys.argv[2]
+    destinationroot = arglist[1]
+    print(destinationroot)
 except:
     destinationroot = ''
     while ('\\' not in destinationroot):
