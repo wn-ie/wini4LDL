@@ -55,7 +55,7 @@ def writekennyloggins(status, bomont):
     with open(bomont, 'a') as loggins:
         loggins.write('''%s\n''' % status)
 
-print("ok! i'm working on this for you!\nDON'T close me (this window), but you can minimize me!\nif there's a problem i'll tell you below and also email you\na log of my progress is located at\n%s\n%s" % (bomont, '-'*70))
+print("\nok! i'm working on this for you!\nDON'T close me (this window), but you can minimize me!\nif there's a problem i'll tell you below and also email you\na log of my progress is located at\n%s\n%s" % (bomont, '-'*70))
 datetimespacing = ' '*27
 try:
     # find all root level tarballs
