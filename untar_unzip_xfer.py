@@ -7,15 +7,12 @@ from datetime import datetime
 
 try:
     arglist = subargs
-    # print(arglist[0])
-    # print(arglist[1])
-except Exception:
-    errortraceback = traceback.format_exc()
-    print(errortraceback)
+
+except:
+    arglist = []
 # source input, windows only
 try:
     drivepath = arglist[0]
-    print(drivepath)
 except:
     drivepath = ''
     while ('\\' not in drivepath):
@@ -30,7 +27,7 @@ except:
 # destination input, windows only
 try:
     destinationroot = arglist[1]
-    print(destinationroot)
+
 except:
     destinationroot = ''
     while ('\\' not in destinationroot):
@@ -57,7 +54,6 @@ status='''code started at %s''' % starttime
 def writekennyloggins(status, bomont):
     with open(bomont, 'a') as loggins:
         loggins.write('''%s\n''' % status)
-    print(status)
 
 print("ok! i'm working on this for you!\nDON'T close me (this window), but you can minimize me!\nif there's a problem i'll tell you below and also email you\na log of my progress is located at\n%s\n%s" % (bomont, '-'*70))
 datetimespacing = ' '*27
