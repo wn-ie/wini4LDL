@@ -5,11 +5,12 @@
 import os, sys, subprocess, glob, zipfile, tarfile, shutil, traceback
 from datetime import datetime
 
+# see if there are arguments from initial command
 try:
     arglist = subargs
-
 except:
     arglist = []
+
 # source input, windows only
 try:
     drivepath = arglist[0]
@@ -40,7 +41,6 @@ except:
             destinationroot = ''
 
 # onedrive path for logging/alerting
-# onedriveroot = r'C:\Users\wschlin\OneDrive - Louisiana State University\Code_UntarOutput'
 onedriveroot = r"\\LIB-HSC082\Code_UntarOutput"
 onedrivelogpath = "%s\\logs" % onedriveroot
 onedrivesummarypath = "%s\\copysummaries" % onedriveroot
