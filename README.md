@@ -22,7 +22,7 @@ If you don't have access, email Winnie (wschlin@lsu.edu) to get access. Once you
 ### untar_unzip_xfer use instructions
 To use this code on materials, you'll use the windows command prompt (which you can find by pressing the start button and then typing 'cmd') and you can paste a command which has 5 components, a non-working sample/template of it looks like this:
 
-py P:\ath\to\RunRawGitHub.py https://github.com/WinnieSchLin/wini4LDL/blob/main/untar_unzip_xfer.py P:\ath\to\SOURCE\drive P:\ath\to\DESTINATION\drive
+`py P:\ath\to\RunRawGitHub.py https://github.com/WinnieSchLin/wini4LDL/blob/main/untar_unzip_xfer.py P:\ath\to\SOURCE\drive P:\ath\to\DESTINATION\drive`
 
 If you forget to include any of these components, don't worry! This is just a shortcut, the code will ask you in the command prompt window and you can enter everything then.
 
