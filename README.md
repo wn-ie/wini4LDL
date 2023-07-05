@@ -36,10 +36,10 @@ The location of the python code file (RunRawGitHub.py). This will change dependi
 `https://github.com/WinnieSchLin/wini4LDL/blob/main/untar_unzip_xfer.py`  
 The GitHub link to the code that does the untarballing / unzipping / transfer. This will always be the same.
 
-`"P:\ath\to\SOURCE\drive"`
+`"P:\ath\to\SOURCE\drive"`  
 The location of the source files, so the path to the hard drive (probably something like 'D:\' or 'E:\'). Make sure to use quotation marks!
 
-`"P:\ath\to\DESTINATION\drive"`
+`"P:\ath\to\DESTINATION\drive"`  
 The location of where you want the destination to be, probably a folder in either the R Drive or P Drive. Make sure to use quotation marks!
 
 The command that you come up with (from substituting the above components where necessary) may change slightly between harddrives (maybe harddrive1 is '"D:\"' but harddrive2 is '"E:\"', or the destinations are '"R:\afolder\harddrive1"' and '"R:\afolder\harddrive2"' respectively, but they should generally be pretty similar and potentially copy-and-pastable!
