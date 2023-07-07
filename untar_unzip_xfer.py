@@ -20,7 +20,10 @@ except:
         # asks for the directory in the CLI window
         drivepath_input = input('drag or paste the source (hard drive) path below:\n> ')
         if '\\' in drivepath_input:
-            drivepath = drivepath_input.replace('''"''', '''''')
+            if '"' in drivepath_input:
+                drivepath =  drivepath_input
+            else:
+                drivepath = '''"%s"''' % drivepath_input
         # put in a path to a directory pls
         else:
             drivepath = ''
@@ -34,20 +37,24 @@ except:
         # asks for the directory in the CLI window
         destinationroot_input = input('drag or paste the destination (R or P drive folder) path below:\n> ')
         if '\\' in destinationroot_input:
-            destinationroot =  destinationroot_input.replace('''"''', '''''')
+            if '"' in destinationroot_input:
+                destinationroot =  destinationroot_input
+            else:
+                destinationroot = '''"%s"''' % destinationroot_input
         # put in a path to a directory pls
         else:
             destinationroot = ''
 
 # try finding specific OneDrive user's path, windows only
 try:
-    lsuid = arglist[2].replace('@lsu.edu', '')
-    localonedriveroot = "C:\\Users\\%s\\OneDrive - Louisiana State University\\Code_UntarOutput" % lsuid
-    if os.path.exists(localonedriveroot) == True:
-        onedriveroot = localonedriveroot
-    else:
-        onedriveroot = r"\\LIB-HSC082\Code_UntarOutput"
+    lsuusername = arglist[2].replace('@lsu.edu', '')
 except:
+    lsuusername_input = input('type your lsu username below:\n> ')
+    lsuusername = lsuusername_input.replace('@lsu.edu', '')
+localonedriveroot = "C:\\Users\\%s\\OneDrive - Louisiana State University\\Code_UntarOutput" % lsuusername
+if os.path.exists(localonedriveroot) == True:
+    onedriveroot = localonedriveroot
+else:
     onedriveroot = r"\\LIB-HSC082\Code_UntarOutput"
 
 # onedrive path for logging/alerting

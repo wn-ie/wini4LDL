@@ -17,12 +17,12 @@ To run this file, you'll also need the python requests module. To install reques
 
 You'll also need access to the following OneDrive folder:
 `https://lsumail2-my.sharepoint.com/:f:/g/personal/wschlin_lsu_edu/ElNhf_pbWD5KiAq9UTwJnd0BQhvlJQC10MNSDInGaES4sA`
-If you don't have access, email Winnie (wschlin@lsu.edu) to get access. Once you have access, open the OneDrive application on your computer, find the path to the folder, and email it to Winnie (this is in order to get syncing to happen from your computer).
+If you don't have access, email Winnie (wschlin@lsu.edu) to get access. Once you have access, open the OneDrive application on your computer and make sure that the folder is showing on your OneDrive.
 
 ### untar_unzip_xfer use instructions
 To use this code on materials, you'll use the windows command prompt (which you can find by pressing the start button and then typing 'cmd') and you can paste a command which has 5 components, a non-working sample/template of it looks like this:
 
-`py P:\ath\to\RunRawGitHub.py https://github.com/WinnieSchLin/wini4LDL/blob/main/untar_unzip_xfer.py P:\ath\to\SOURCE\drive P:\ath\to\DESTINATION\drive`
+`py P:\ath\to\RunRawGitHub.py https://github.com/WinnieSchLin/wini4LDL/blob/main/untar_unzip_xfer.py "P:\ath\to\SOURCE\drive" "P:\ath\to\DESTINATION\drive" lsuusername`
 
 If you forget to include any of these components, don't worry! This is just a shortcut, the code will ask you in the command prompt window and you can enter everything then.
 
