@@ -42,4 +42,7 @@ The location of the source files, so the path to the hard drive (probably someth
 `"P:\ath\to\DESTINATION\drive"`  
 The location of where you want the destination to be, probably a folder in either the R Drive or P Drive. Make sure to use quotation marks!
 
+`lsuusername`
+Your LSU username, aka the first part of your LSU email address (such as `wschlin` or `jharre7`)
+
 The command that you come up with (from substituting the above components where necessary) may change slightly between harddrives (maybe harddrive1 is '"D:\"' but harddrive2 is '"E:\"', or the destinations are '"R:\afolder\harddrive1"' and '"R:\afolder\harddrive2"' respectively, but they should generally be pretty similar and potentially copy-and-pastable!
