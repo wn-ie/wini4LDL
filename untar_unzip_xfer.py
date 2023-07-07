@@ -28,7 +28,6 @@ except:
 # destination input, windows only
 try:
     destinationroot = arglist[1]
-
 except:
     destinationroot = ''
     while ('\\' not in destinationroot):
@@ -40,8 +39,19 @@ except:
         else:
             destinationroot = ''
 
+# try finding specific OneDrive user's path, windows only
+try:
+    lsuid = arglist[2].replace('@lsu.edu', '')
+    localonedriveroot = "C:\\Users\\%s\\OneDrive - Louisiana State University\\Code_UntarOutput" % lsuid
+    if os.path.exists(localonedriveroot) == True:
+        onedriveroot = localonedriveroot
+    else:
+        onedriveroot = r"\\LIB-HSC082\Code_UntarOutput"
+except:
+    onedriveroot = r"\\LIB-HSC082\Code_UntarOutput"
+
 # onedrive path for logging/alerting
-onedriveroot = r"\\LIB-HSC082\Code_UntarOutput"
+
 onedrivelogpath = "%s\\logs" % onedriveroot
 onedrivesummarypath = "%s\\copysummaries" % onedriveroot
 onedrivepythonerrorpath = "%s\\errors\\pythonerrors" % onedriveroot
@@ -167,7 +177,7 @@ try:
                 summary.write(summarytext)
 
             # remove working dir created in source location
-            status = '''%s  removing tarball working directory\n%s tarball complete%s\n''' % (datetime.now(), datetimespacing, '-'*70)
+            status = '''%s  removing tarball working directory\n%s tarball complete\n%s\n''' % (datetime.now(), datetimespacing, '-'*70)
             writekennyloggins(status, bomont)
             shutil.rmtree(atarballdir)
         else:
