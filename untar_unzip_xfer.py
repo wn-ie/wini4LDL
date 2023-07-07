@@ -47,7 +47,7 @@ except:
 
 # try finding specific OneDrive user's path, windows only
 try:
-    lsuusername = arglist[2].replace('@lsu.edu', '')
+    lsuusername = arglist[2].replace('@lsu.edu', '').replace('''"''', '''''')
 except:
     lsuusername_input = input('type your lsu username below:\n> ')
     lsuusername = lsuusername_input.replace('@lsu.edu', '')
