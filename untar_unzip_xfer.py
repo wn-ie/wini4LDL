@@ -179,7 +179,7 @@ try:
             # all done, now summarize
             status = '''%s  file transfers complete\n%s number of files copied successfully: %s\n%s number of copy errors: %s''' % (datetime.now(), datetimespacing, successacc, datetimespacing, erroracc)
             writekennyloggins(status, bomont)
-            summarytext = '''file # %s of %s in source directory\noriginal tarball path:\n%s\nnumber of files copied: %s\nnumber of copy errors: %s\ntotal number of files: %s\ntotal number of directories: %s\n''' % (tarcount, totalroottarfiles, atarball, successacc, erroracc, total_files, total_dirs)
+            summarytext = '''file # %s of %s in source directory.\noriginal tarball path:\n%s\nnumber of files copied: %s.\nnumber of copy errors: %s.\ntotal number of files: %s.\ntotal number of directories: %s.\n''' % (tarcount, totalroottarfiles, atarball, successacc, erroracc, total_files, total_dirs)
             with open(summarypath, 'a') as summary:
                 summary.write(summarytext)
 
