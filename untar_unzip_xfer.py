@@ -180,6 +180,8 @@ try:
             status = '''%s  file transfers complete\n%s number of files copied successfully: %s\n%s number of copy errors: %s''' % (datetime.now(), datetimespacing, successacc, datetimespacing, erroracc)
             writekennyloggins(status, bomont)
             summarytext = '''file # %s of %s in source directory.\noriginal tarball path:\n%s\nnumber of files copied: %s.\nnumber of copy errors: %s.\ntotal number of files: %s.\ntotal number of directories: %s.\n''' % (tarcount, totalroottarfiles, atarball, successacc, erroracc, total_files, total_dirs)
+            with open(str('%s\\%s__copysummary.txt' % (onedrivesummarypath, (atarball.replace(drivepath, "").replace('.tar.gz', '')))), 'a') as onedrivesummary:
+                onedrivesummary.write(summarytext)
             with open(summarypath, 'a') as summary:
                 summary.write(summarytext)
 
@@ -187,11 +189,11 @@ try:
             status = '''%s  removing tarball working directory\n%s tarball complete\n%s\n''' % (datetime.now(), datetimespacing, '-'*70)
             writekennyloggins(status, bomont)
             shutil.rmtree(atarballdir)
+
         else:
             status = '''%s  summary path already exists at:\n%s %s\n%s''' % (datetime.now(), datetimespacing, summarypath, '-'*70)
             writekennyloggins(status, bomont)
-        with open(str('%s\\%s__copysummary.txt' % (onedrivesummarypath, (atarball.replace(drivepath, "").replace('.tar.gz', '')))), 'a') as onedrivesummary:
-            onedrivesummary.write(summarytext)
+        
 except Exception:
     errortraceback = traceback.format_exc()
     with open('%s\\%s__codeerror.txt' % (onedrivepythonerrorpath, starttime), 'w') as onedrivepytherror:
